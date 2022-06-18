@@ -2,4 +2,4 @@
 
 ReactJS + Json-server ile geliştirilen bir e-ticaret uygulamasıdır. 
 
-![main page.](/pic.png "This is a sample image.")
+![main page.](/client/pic.png "This is a sample image.")
