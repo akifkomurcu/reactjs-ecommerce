@@ -3,6 +3,7 @@ import Card from "../../components/Card";
 import { useInfiniteQuery } from "react-query";
 import { fetchProductList } from "../../api";
 import React from "react";
+
 function Products() {
   const {
     data,
@@ -22,7 +23,6 @@ function Products() {
     },
   });
   if (status === "loading") return "Loading...";
-
   if (status === "error") return "An error has occurred: " + error.message;
   console.log(data);
   return (
