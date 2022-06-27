@@ -17,7 +17,7 @@ function Navbar() {
         </ul>
       </div>
       <div className={styles.right}>
-        {!loggedIn && (
+        {!loggedIn.user && (
           <>
             <Link to="/register">
               <Button colorScheme="teal" variant="ghost">
@@ -31,7 +31,7 @@ function Navbar() {
             </Link>
           </>
         )}
-        {loggedIn && (
+        {loggedIn.user && (
           <>
             <Link to="/profile">
               <Button colorScheme="teal" variant="ghost">

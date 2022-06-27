@@ -444,73 +444,14 @@
   ],
   "users": [
     {
-      "id": "60cc84ca0fd0140bf24740f0",
-      "role": "user",
-      "email": "akif@komurcu.com",
-      "password": "$2b$10$Yz8qE6B6xmMmsPMbrXCcrOLnEPTSyHEcz6nFtoeI5oPWmQTEQGRNa",
-      "__v": 0
-    },
-    {
-      "id": "60cdcd15afb7ad2b900a9a53",
-      "role": "admin",
-      "email": "admin@admin.com",
-      "password": "$2b$10$YKJYFWXl65mYWXTl3V7EiuEk4AUa27sh0EivwRaSnX9jvi9yo58wG",
-      "__v": 0
-    },
-    {
-      "id": "60cdd4cdafb7ad2b900a9a54",
-      "role": "user",
-      "email": "ahmet@ahmet.com",
-      "password": "$2b$10$rUyKJxey37YG8MhU5DVYoeJJoYoYP2EQyM75w7zQhRwVVAIH/Zhyi",
-      "__v": 0
-    },
-    {
-      "id": "60ce0166afb7ad2b900a9a5c",
-      "role": "user",
-      "email": "test@test.com",
-      "password": "$2b$10$.ALXiQil/bvZFBEV7SNtYOiXrspkThQwAn2dOyJchKxE8UdtnffzG",
-      "__v": 0
-    },
-    {
-      "role": "deneme",
-      "email": "deneme@deneme.com",
-      "password": "12345",
-      "id": "UYHICwi"
-    },
-    {
-      "email": "deneme1@deneme1.com",
-      "password": "12345",
-      "id": "mT8dyZ7"
-    },
-    {
-      "email": "asdasd@asdas.com",
-      "password": "12341234",
-      "id": "OK1j0pI"
-    },
-    {
-      "email": "asdasd@asdas.com",
-      "password": "12341234",
-      "id": "NoG7OmW"
-    },
-    {
-      "email": "sdasd@gmail.com",
-      "password": "123123",
-      "id": "bRhRnW6"
-    },
-    {
-      "email": "sdasd@gmail.com",
-      "password": "123123",
-      "id": "tpkRZjv"
-    },
-    {
       "email": "akif@akif.com",
-      "password": "123123",
-      "id": "-9oWmCV"
+      "password": "1837837",
+      "id": 1
     },
     {
-      "email": "asdasdsaasd@gmail.com",
-      "password": "44444",
-      "id": "HCUpMrk"
+      "email": "deneme@deneme.com",
+      "password": "123123",
+      "id": 2
     }
   ]
 }

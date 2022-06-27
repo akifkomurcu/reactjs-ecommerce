@@ -21,3 +21,10 @@ export const FetchRegister = async (input) => {
   );
   return data;
 };
+export const FetchLogin = async (input) => {
+  const { data } = await axios.get(
+    `${process.env.REACT_APP_BASE_ENDPOINT}/users`,
+    input
+  );
+  return data;
+};
