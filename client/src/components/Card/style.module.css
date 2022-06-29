@@ -1,3 +1,6 @@
+.productImage {
+  transition: transform 0.5s;
+}
 .productImage:hover {
   transition: transform 0.5s;
   transform: scale(1.06);

@@ -6,6 +6,8 @@ import Register from "./pages/Auth/Register";
 import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import Profile from "./pages/Profile";
+import Basket from "./pages/Basket";
+import Error404 from "./pages/Error";
 
 function App() {
   return (
@@ -18,7 +20,9 @@ function App() {
           <Route path="/Register" element={<Register />} />
           <Route path="/Profile" element={<Profile />} />
           <Route path="/Profile" element={<Profile />} />
+          <Route path="/basket" element={<Basket />} />
           <Route path="/product/:product_id" element={<ProductDetail />} />
+          <Route path="*" element={<Error404 />} />
         </Routes>
       </div>
     </div>

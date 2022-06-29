@@ -4,6 +4,7 @@ import "./index.css";
 import "./reset.css";
 import App from "./App";
 import { AuthProvider } from "./context/AuthContext";
+import { BasketProvider } from "./context/BasketContext";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -17,7 +18,9 @@ root.render(
       <ChakraProvider>
         <BrowserRouter>
           <AuthProvider>
-            <App />
+            <BasketProvider>
+              <App />
+            </BasketProvider>
           </AuthProvider>
         </BrowserRouter>
       </ChakraProvider>
