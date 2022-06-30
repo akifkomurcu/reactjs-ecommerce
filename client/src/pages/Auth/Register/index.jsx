@@ -19,6 +19,7 @@ function Register() {
   const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
+      role: "user",
       email: "",
       password: "",
       passwordConfirm: "",
@@ -27,6 +28,7 @@ function Register() {
     onSubmit: async (values, bag) => {
       try {
         const registerResponse = await FetchRegister({
+          role: values.role,
           email: values.email,
           password: values.password,
         });

@@ -6,7 +6,6 @@ import { useBasket } from "../../context/BasketContext";
 function Navbar() {
   const loggedIn = useAuth();
   const { items } = useBasket();
-
   return (
     <nav className={styles.nav}>
       <div className={styles.left}>
@@ -42,6 +41,14 @@ function Navbar() {
               <Link to="/basket">
                 <Button colorScheme="teal" variant="ghost">
                   Basket ({items.length})
+                </Button>
+              </Link>
+            )}
+
+            {loggedIn.user === "akif@akif.com" && (
+              <Link to="/admin">
+                <Button colorScheme="teal" variant="ghost">
+                  Admin
                 </Button>
               </Link>
             )}

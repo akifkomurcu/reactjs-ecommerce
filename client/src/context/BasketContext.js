@@ -19,6 +19,10 @@ const BasketProvider = ({ children }) => {
     setItems(filtered);
   };
 
+  //orderdan sonra sepet boşaltma.
+
+  const emptyBasket = () => setItems([]);
+
   const removeFromBasket = (id) => {
     const filtered = items.filter((item) => item.id !== id);
     setItems(filtered);
@@ -29,6 +33,7 @@ const BasketProvider = ({ children }) => {
     setItems,
     addToBasket,
     removeFromBasket,
+    emptyBasket,
   };
   return (
     <BasketContext.Provider value={values}>{children}</BasketContext.Provider>

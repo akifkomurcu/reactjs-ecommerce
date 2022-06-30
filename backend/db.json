@@ -1,91 +1,29 @@
 {
   "orders": [
     {
-      "id": "60cca7680fd0140bf24740f2",
-      "items": [
-        {
-          "id": "60796121880e7cf6bd9ef8b1"
-        },
-        {
-          "id": "6079611f880e7cf6bd9ef8b0"
-        }
-      ],
-      "user": {
-        "id": "60cc84ca0fd0140bf24740f0"
-      },
-      "adress": "ataşehir",
-      "createdAt": {
-        "$date": {
-          "$numberLong": "1624024936556"
-        }
-      },
-      "__v": 0
+      "adress": "Sivas",
+      "items": "[\"6078a0a496704abb0eee7f08\"]",
+      "id": 1
     },
     {
-      "id": "60cca7ac0fd0140bf24740f3",
-      "items": [
-        {
-          "id": "60796121880e7cf6bd9ef8b1"
-        },
-        {
-          "id": "6079611f880e7cf6bd9ef8b0"
-        }
-      ],
-      "user": {
-        "id": "60cc84ca0fd0140bf24740f0"
-      },
-      "adress": "deneme",
-      "createdAt": {
-        "$date": {
-          "$numberLong": "1624025004912"
-        }
-      },
-      "__v": 0
+      "adress": "İstanbul",
+      "items": "[\"60796110880e7cf6bd9ef8a5\",\"6078a0a496704abb0eee7f08\"]",
+      "id": 2
     },
     {
-      "id": "60cdd4e4afb7ad2b900a9a55",
-      "items": [
-        {
-          "id": "6078a0a796704abb0eee7f09"
-        },
-        {
-          "id": "6078a0b696704abb0eee7f0a"
-        },
-        {
-          "id": "6078a0a496704abb0eee7f08"
-        },
-        {
-          "id": "60783a5adfb6e19e4a2e6b3b"
-        }
-      ],
-      "user": {
-        "id": "60cdd4cdafb7ad2b900a9a54"
-      },
-      "adress": "Ankara/Çankaya",
-      "createdAt": {
-        "$date": {
-          "$numberLong": "1624102116307"
-        }
-      },
-      "__v": 0
+      "adress": "Ankara",
+      "items": "[\"60796110880e7cf6bd9ef8a5\",\"6078a0a496704abb0eee7f08\"]",
+      "id": 3
     },
     {
-      "id": "60ce01a1afb7ad2b900a9a5d",
-      "items": [
-        {
-          "id": "60cdfd3bafb7ad2b900a9a59"
-        }
-      ],
-      "user": {
-        "id": "60ce0166afb7ad2b900a9a5c"
-      },
-      "adress": "İzmir/Karşıyaka",
-      "createdAt": {
-        "$date": {
-          "$numberLong": "1624113569186"
-        }
-      },
-      "__v": 0
+      "adress": "aaa",
+      "items": "[\"60796110880e7cf6bd9ef8a5\",\"6078a0a496704abb0eee7f08\"]",
+      "id": 4
+    },
+    {
+      "adress": "izmir",
+      "items": "[\"60796110880e7cf6bd9ef8a5\",\"6078a0a496704abb0eee7f08\"]",
+      "id": 5
     }
   ],
   "product": [
@@ -444,14 +382,17 @@
   ],
   "users": [
     {
+      "role": "admin",
       "email": "akif@akif.com",
       "password": "1837837",
       "id": 1
     },
     {
+      "role": "user",
       "email": "deneme@deneme.com",
       "password": "123123",
       "id": 2
     }
+
   ]
 }
