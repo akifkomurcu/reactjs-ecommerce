@@ -13,6 +13,13 @@ export const fetchProduct = async (id) => {
   );
   return data;
 };
+export const PostProduct = async (input) => {
+  const { data } = await axios.post(
+    process.env.REACT_APP_BASE_ENDPOINT + `/product/`,
+    input
+  );
+  return data;
+};
 export const fetchAllProduct = async () => {
   const { data } = await axios.get(
     process.env.REACT_APP_BASE_ENDPOINT + `/product`
@@ -56,6 +63,13 @@ export const FetchOrder = async () => {
 export const DeletProduct = async (product_id) => {
   const { data } = await axios.delete(
     `${process.env.REACT_APP_BASE_ENDPOINT}/product/${product_id}`
+  );
+  return data;
+};
+export const updateProduct = async (input, product_id) => {
+  const { data } = await axios.put(
+    `${process.env.REACT_APP_BASE_ENDPOINT}/product/${product_id}`,
+    input
   );
   return data;
 };

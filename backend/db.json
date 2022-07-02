@@ -21,19 +21,14 @@
   ],
   "product": [
     {
-      "id": "6078a0b696704abb0eee7f0a",
+      "title": "Acer Notebook",
+      "description": "Acer bok gibi notebook çok ucuz fiyata!",
+      "price": "8000",
       "photos": [
         "https://images.unsplash.com/photo-1565339119519-c9eaa1918b9f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
         "https://images.unsplash.com/photo-1593642633279-1796119d5482?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
       ],
-      "title": "Acer",
-      "description": "Trees live in your fan brush, but you have to scare them out. Just let this happen. We just let this flow right out of our minds. You're meant to have fun in life. Clouds are free. They just float around the sky all day and have fun.\n\nSee there how easy that is. Automatically, all of these beautiful, beautiful things will happen. We tell people sometimes: we're like drug dealers, come into town and get everybody absolutely addicted to painting. It doesn't take much to get you addicted. These trees are so much fun. I get started on them and I have a hard time stopping. Life is too short to be alone, too precious. Share it with a friend.",
-      "price": 600,
-      "createdAt": {
-        "$date": {
-          "$numberLong": "1618518198105"
-        }
-      }
+      "id": "6078a0b696704abb0eee7f0a"
     },
     {
       "id": "60cdfcf4afb7ad2b900a9a58",
@@ -46,21 +41,6 @@
       "createdAt": {
         "$date": {
           "$numberLong": "1624112372257"
-        }
-      }
-    },
-    {
-      "id": "6078a0bc96704abb0eee7f0b",
-      "photos": [
-        "https://images.unsplash.com/photo-1565339119519-c9eaa1918b9f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-        "https://images.unsplash.com/photo-1593642633279-1796119d5482?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
-      ],
-      "title": "Samsung",
-      "description": "Trees live in your fan brush, but you have to scare them out. Just let this happen. We just let this flow right out of our minds. You're meant to have fun in life. Clouds are free. They just float around the sky all day and have fun.\n\nSee there how easy that is. Automatically, all of these beautiful, beautiful things will happen. We tell people sometimes: we're like drug dealers, come into town and get everybody absolutely addicted to painting. It doesn't take much to get you addicted. These trees are so much fun. I get started on them and I have a hard time stopping. Life is too short to be alone, too precious. Share it with a friend.",
-      "price": 600,
-      "createdAt": {
-        "$date": {
-          "$numberLong": "1618518204779"
         }
       }
     },
@@ -123,6 +103,15 @@
           "$numberLong": "1618518183684"
         }
       }
+    },
+    {
+      "title": "Apple Watch",
+      "description": "apple watch saati",
+      "price": "500",
+      "photos": [
+        "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+      ],
+      "id": "Xpqh6vf"
     }
   ],
   "users": [

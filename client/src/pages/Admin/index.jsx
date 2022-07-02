@@ -7,6 +7,8 @@ import Login from "../Auth/Login";
 import Home from "./Home";
 import Products from "./Products";
 import Orders from "./Orders";
+import ProductDetail from "./ProductDetail";
+import NewProduct from "./Products/new";
 function Admin() {
   const { user } = useAuth();
 
@@ -31,6 +33,8 @@ function Admin() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/products" element={<Products />} />
+              <Route path="/products/new" element={<NewProduct />} />
+              <Route path="/products/:product_id" element={<ProductDetail />} />
               <Route path="/orders" element={<Orders />} />
             </Routes>
           </Box>
