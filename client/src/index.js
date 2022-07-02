@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import "./reset.css";
+import "antd/dist/antd.css";
 import App from "./App";
 import { AuthProvider } from "./context/AuthContext";
 import { BasketProvider } from "./context/BasketContext";

@@ -13,6 +13,12 @@ export const fetchProduct = async (id) => {
   );
   return data;
 };
+export const fetchAllProduct = async () => {
+  const { data } = await axios.get(
+    process.env.REACT_APP_BASE_ENDPOINT + `/product`
+  );
+  return data;
+};
 
 export const FetchRegister = async (input) => {
   const { data } = await axios.post(
@@ -44,6 +50,12 @@ export const FetchUsers = async () => {
 export const FetchOrder = async () => {
   const { data } = await axios.get(
     `${process.env.REACT_APP_BASE_ENDPOINT}/orders`
+  );
+  return data;
+};
+export const DeletProduct = async (product_id) => {
+  const { data } = await axios.delete(
+    `${process.env.REACT_APP_BASE_ENDPOINT}/product/${product_id}`
   );
   return data;
 };
