@@ -23,8 +23,7 @@ export const FetchRegister = async (input) => {
 };
 export const FetchLogin = async (input) => {
   const { data } = await axios.get(
-    `${process.env.REACT_APP_BASE_ENDPOINT}/users`,
-    input
+    `${process.env.REACT_APP_BASE_ENDPOINT}/users?email=${input.email}&password=${input.password}`
   );
   return data;
 };
@@ -33,6 +32,12 @@ export const PostOrder = async (input) => {
   const { data } = await axios.post(
     `${process.env.REACT_APP_BASE_ENDPOINT}/orders`,
     input
+  );
+  return data;
+};
+export const FetchUsers = async () => {
+  const { data } = await axios.get(
+    `${process.env.REACT_APP_BASE_ENDPOINT}/users`
   );
   return data;
 };

@@ -1,4 +1,5 @@
 import { useState, useEffect, createContext, useContext } from "react";
+import { FetchUsers } from "../api";
 
 const AuthContext = createContext();
 
@@ -11,6 +12,18 @@ const AuthProvider = ({ children }) => {
       setUser(JSON.parse(localStorage.getItem("user")));
       setLoggedIn(true);
     }
+    //admin sayfa yenilenince state'ten silinidiği için localden alacağın kullanıcı adını backendde arayacağız. varsa giriş yapmış ve login durumunda kalacak ve rolünü tekrar alacak.
+    async function UsersFunction() {
+      const LoginResponse = await FetchUsers();
+
+      LoginResponse.filter((user) =>
+        JSON.parse(localStorage.getItem("user")) === user.email
+          ? setUser(user)
+          : ""
+      );
+    }
+
+    UsersFunction();
   }, []);
 
   const login = (data) => {

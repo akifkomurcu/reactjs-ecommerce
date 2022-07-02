@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Flex,
   Box,
@@ -22,7 +21,9 @@ function Login() {
     initialValues: {
       email: "",
       password: "",
+      role: "",
     },
+
     validationSchema,
     onSubmit: async (values) => {
       try {
@@ -30,6 +31,7 @@ function Login() {
           email: values.email,
           password: values.password,
         });
+
         if (
           LoginResponse.some((Mail) => formik.values.email === Mail.email) &&
           LoginResponse.some(
@@ -43,6 +45,7 @@ function Login() {
       } catch (err) {}
     },
   });
+
   return (
     <div>
       <Flex align="center" width="full" justifyContent="center">
