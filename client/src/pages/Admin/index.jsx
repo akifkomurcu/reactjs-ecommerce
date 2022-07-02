@@ -1,21 +1,40 @@
 import { useState, useEffect } from "react";
-import { Link, Switch, Route, useRouteMatch } from "react-router-dom";
-import { FetchLogin } from "../../api";
+import { Link, Routes, Route } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
+import "./style.css";
+import { Box } from "@chakra-ui/react";
 import Login from "../Auth/Login";
+import Home from "./Home";
+import Products from "./Products";
+import Orders from "./Orders";
 function Admin() {
-  const [me, setMe] = useState("");
-  useEffect(() => {
-    if (localStorage.getItem("user")) {
-      setMe(JSON.parse(localStorage.getItem("user")));
-    }
-  }, []);
+  const { user } = useAuth();
 
   return (
     <div>
-      {me === "akif@akif.com" ? (
-        <nav>
-          <ul>home</ul>
-        </nav>
+      {user && user.role === "admin" ? (
+        <>
+          <nav>
+            <ul className="admin-menu">
+              <Link to="/admin/">
+                <li>Home</li>
+              </Link>
+              <Link to={`/admin/orders`}>
+                <li>Orders</li>
+              </Link>
+              <Link to={`/admin/products`}>
+                <li>Products</li>
+              </Link>
+            </ul>
+          </nav>
+          <Box mt={10}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/orders" element={<Orders />} />
+            </Routes>
+          </Box>
+        </>
       ) : (
         <Login />
       )}

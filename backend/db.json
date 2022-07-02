@@ -1,29 +1,22 @@
 {
   "orders": [
     {
-      "adress": "Sivas",
-      "items": "[\"6078a0a496704abb0eee7f08\"]",
-      "id": 1
-    },
-    {
-      "adress": "İstanbul",
-      "items": "[\"60796110880e7cf6bd9ef8a5\",\"6078a0a496704abb0eee7f08\"]",
+      "user": "akif@akif.com",
+      "adress": "asdasd",
+      "items": [
+        "Dell Notebook"
+      ],
       "id": 2
     },
     {
-      "adress": "Ankara",
-      "items": "[\"60796110880e7cf6bd9ef8a5\",\"6078a0a496704abb0eee7f08\"]",
+      "user": "akif@akif.com",
+      "adress": "qqq",
+      "items": [
+        "Creative 7",
+        "Dell Notebook",
+        "Creative 8"
+      ],
       "id": 3
-    },
-    {
-      "adress": "aaa",
-      "items": "[\"60796110880e7cf6bd9ef8a5\",\"6078a0a496704abb0eee7f08\"]",
-      "id": 4
-    },
-    {
-      "adress": "izmir",
-      "items": "[\"60796110880e7cf6bd9ef8a5\",\"6078a0a496704abb0eee7f08\"]",
-      "id": 5
     }
   ],
   "product": [
@@ -393,6 +386,5 @@
       "password": "123123",
       "id": 2
     }
-
   ]
 }

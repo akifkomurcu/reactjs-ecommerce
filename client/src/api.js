@@ -41,3 +41,9 @@ export const FetchUsers = async () => {
   );
   return data;
 };
+export const FetchOrder = async () => {
+  const { data } = await axios.get(
+    `${process.env.REACT_APP_BASE_ENDPOINT}/orders`
+  );
+  return data;
+};

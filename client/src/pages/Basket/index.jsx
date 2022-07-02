@@ -32,11 +32,12 @@ function Basket() {
 
   //order process to backend
   const handleSubmit = async () => {
-    const itemIds = items.map((item) => item.id);
+    const itemIds = items.map((item) => item.title);
 
     const input = {
+      user: JSON.parse(localStorage.getItem("user")),
       adress,
-      items: JSON.stringify(itemIds),
+      items: itemIds,
     };
     await PostOrder(input);
     emptyBasket();

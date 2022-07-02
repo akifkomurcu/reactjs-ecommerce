@@ -22,7 +22,7 @@ function App() {
           <Route path="/Profile" element={<Profile />} />
           <Route path="/Profile" element={<Profile />} />
           <Route path="/basket" element={<Basket />} />
-          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin/*" element={<Admin />} />
           <Route path="/product/:product_id" element={<ProductDetail />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
