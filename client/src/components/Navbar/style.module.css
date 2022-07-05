@@ -6,12 +6,21 @@
   line-height: 2px;
   align-items: center;
 }
+.logo {
+  padding: 5px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 26px;
+}
+.logo:hover {
+  color: black;
+}
 .nav .left {
   display: flex;
 }
-.nav .left .menu {
+.menu {
   display: flex;
   margin-left: 40px;
+  font-size: 26px;
 }
 .nav .left .menu li a {
   color: rgb(122, 122, 128);

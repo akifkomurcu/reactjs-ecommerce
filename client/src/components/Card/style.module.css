@@ -5,3 +5,14 @@
   transition: transform 0.5s;
   transform: scale(1.06);
 }
+.date {
+  font-size: 20px;
+}
+.price {
+  font-size: 20px;
+}
+.productInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

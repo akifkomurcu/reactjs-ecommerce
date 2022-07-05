@@ -33,7 +33,7 @@ function Products() {
       },
       {
         title: "Created At",
-        dataIndex: "creactedAt",
+        dataIndex: "createdAt",
         key: "createdAt",
       },
       {

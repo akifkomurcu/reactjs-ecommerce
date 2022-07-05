@@ -1,0 +1,16 @@
+.logOutButton {
+  float: right;
+}
+.myOrders {
+  width: 300px;
+  height: 150px;
+  padding: 10px;
+  font-size: 30px;
+}
+.myOrdersContent {
+  margin-top: 5px;
+}
+.welcome {
+  font-size: 20px;
+  font-style: italic;
+}

@@ -2,15 +2,17 @@ import { Link } from "react-router-dom";
 import styles from "./style.module.css";
 import { Button } from "@chakra-ui/react";
 import { useAuth } from "../../context/AuthContext";
+import { useWishlist } from "../../context/Wishlist";
 import { useBasket } from "../../context/BasketContext";
 function Navbar() {
   const { items } = useBasket();
+  const { item } = useWishlist();
   const { user } = useAuth();
 
   return (
     <nav className={styles.nav}>
       <div className={styles.left}>
-        <div className="logo">
+        <div className={styles.logo}>
           <Link to="/">E-commerce</Link>
         </div>
         <ul className={styles.menu}>
@@ -49,6 +51,13 @@ function Navbar() {
               <Link to="/admin">
                 <Button colorScheme="teal" variant="ghost">
                   Admin
+                </Button>
+              </Link>
+            )}
+            {item.length > 0 && (
+              <Link to="/wishlist">
+                <Button colorScheme="teal" variant="ghost">
+                  Wishlist({item.length})
                 </Button>
               </Link>
             )}

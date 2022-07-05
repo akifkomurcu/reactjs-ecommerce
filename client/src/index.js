@@ -6,6 +6,7 @@ import "antd/dist/antd.css";
 import App from "./App";
 import { AuthProvider } from "./context/AuthContext";
 import { BasketProvider } from "./context/BasketContext";
+import { WishlistProvider } from "./context/Wishlist";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -20,7 +21,9 @@ root.render(
         <BrowserRouter>
           <AuthProvider>
             <BasketProvider>
-              <App />
+              <WishlistProvider>
+                <App />
+              </WishlistProvider>
             </BasketProvider>
           </AuthProvider>
         </BrowserRouter>

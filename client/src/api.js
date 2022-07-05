@@ -73,3 +73,17 @@ export const updateProduct = async (input, product_id) => {
   );
   return data;
 };
+
+export const AddWishListAPI = async (input) => {
+  const { data } = await axios.post(
+    `${process.env.REACT_APP_BASE_ENDPOINT}/wishlist`,
+    input
+  );
+  return data;
+};
+export const GetToWishList = async () => {
+  const { data } = await axios.get(
+    `${process.env.REACT_APP_BASE_ENDPOINT}/wishlist`
+  );
+  return data;
+};

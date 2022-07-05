@@ -40,9 +40,9 @@ function Orders() {
               <Td>{order.user}</Td>
               <Td>{order.adress}</Td>
               <Td>
-                <ul>
-                  <li>{order.items.length}</li>
-                </ul>
+                {order.items.map((item) => (
+                  <p>{item}</p>
+                ))}
               </Td>
             </Tr>
           ))}
