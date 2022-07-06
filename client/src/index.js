@@ -7,6 +7,7 @@ import App from "./App";
 import { AuthProvider } from "./context/AuthContext";
 import { BasketProvider } from "./context/BasketContext";
 import { WishlistProvider } from "./context/Wishlist";
+import { FilterProvider } from "./context/FilteredContext";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -22,7 +23,9 @@ root.render(
           <AuthProvider>
             <BasketProvider>
               <WishlistProvider>
-                <App />
+                <FilterProvider>
+                  <App />
+                </FilterProvider>
               </WishlistProvider>
             </BasketProvider>
           </AuthProvider>

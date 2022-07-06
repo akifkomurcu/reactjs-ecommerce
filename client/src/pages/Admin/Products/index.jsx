@@ -46,13 +46,8 @@ function Products() {
               title="Are you sure to delete this product?"
               onConfirm={() => {
                 deleteMutation.mutate(record.id, {
-                  onSuccess: () => {
-                    console.log("success");
-                  },
+                  onSuccess: () => {},
                 });
-              }}
-              onCancel={() => {
-                console.log("cancel");
               }}
               okText="Yes"
               cancelText="No"

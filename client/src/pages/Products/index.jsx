@@ -3,8 +3,11 @@ import Card from "../../components/Card";
 import { useInfiniteQuery } from "react-query";
 import { fetchProductList } from "../../api";
 import React from "react";
-
+import { useContext } from "react";
+import FilterContext from "../../context/FilteredContext";
 function Products() {
+  const { result, filtered } = useContext(FilterContext);
+
   const {
     data,
     error,
@@ -27,18 +30,25 @@ function Products() {
   return (
     <div>
       <Grid templateColumns="repeat(4, 1fr)" gap={1}>
-        {/* {data.map((product, index) => (
-          <Card key={index} product={product} />
-        ))} */}
-        {data.pages.map((group, index) => (
-          <React.Fragment key={index}>
-            {group.map((product, index) => (
-              <Box w="100%" key={index}>
-                <Card product={product} />
-              </Box>
-            ))}
-          </React.Fragment>
-        ))}
+        {result === "" &&
+          data.pages.map((group, index) => (
+            <React.Fragment key={index}>
+              {group.map((product, index) => (
+                <Box w="100%" key={index}>
+                  <Card product={product} />
+                </Box>
+              ))}
+            </React.Fragment>
+          ))}
+        {/* filtre varsa çalışacak */}
+        {result !== "" &&
+          data.length !== 0 &&
+          filtered &&
+          filtered.map((product, index) => (
+            <Box w="100%" key={index}>
+              <Card product={product} />
+            </Box>
+          ))}
       </Grid>
       <Flex mt="10" justifyContent="center" p={10}>
         <Button

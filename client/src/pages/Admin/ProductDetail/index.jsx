@@ -1,5 +1,4 @@
 import React from "react";
-
 import { useParams } from "react-router-dom";
 import { fetchProduct, updateProduct } from "../../../api";
 import { useQuery } from "react-query";
@@ -28,8 +27,6 @@ function ProductDetail() {
     return <div>Error</div>;
   }
   const handleSubmit = async (values, bag) => {
-    console.log("sabmitted");
-
     message.loading({ content: "Loading...", key: "product_update" });
     try {
       await updateProduct(values, product_id);

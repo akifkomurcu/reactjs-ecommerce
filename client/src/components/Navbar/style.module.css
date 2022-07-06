@@ -36,3 +36,7 @@
 .nav .right a:first-child {
   margin-right: 3px;
 }
+.nav .right {
+  display: flex;
+  align-items: center;
+}

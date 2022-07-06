@@ -1,9 +1,8 @@
 import { useWishlist } from "../../context/Wishlist";
 import { Alert, Image, Button, Box, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { PostOrder } from "../../api";
 function Wishlist() {
-  const { item, removeFromWishlist, emptyWishlist } = useWishlist();
+  const { item, removeFromWishlist } = useWishlist();
 
   // const total = item.reduce((acc, obj) => acc + obj.price, 0);
 

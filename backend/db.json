@@ -56,7 +56,8 @@
     {
       "title": "Acer Notebook",
       "description": "Acer notebook çok ucuz fiyata!",
-      "price": "8000",
+      "price": 8000,
+      "category":"Technology",
       "photos": [
         "https://images.unsplash.com/photo-1629751372750-3ddb8f8bfd0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1430&q=80",
         "https://images.unsplash.com/photo-1593642633279-1796119d5482?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
@@ -71,6 +72,7 @@
       "title": "Dell Notebook",
       "description": "Lorem ipsum 2",
       "price": 4000,
+      "category":"Technology",
       "createdAt": {
         "$date": {
           "$numberLong": "1624112372257"
@@ -80,7 +82,8 @@
     {
       "title": "Logitech Mouse",
       "description": "Logitech Mouse",
-      "price": "300",
+      "price": 300,
+      "category":"Technology",
       "photos": [
         "https://images.unsplash.com/photo-1586816879360-004f5b0c51e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
       ],
@@ -90,6 +93,7 @@
       "title": "Apple Macbook",
       "description": "Lorem ipsum",
       "price": 7500,
+      "category":"Technology",
       "photos": [
         "https://images.unsplash.com/photo-1629131726692-1accd0c53ce0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
         "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1414&q=80"
@@ -100,6 +104,7 @@
       "title": "Logitech Keyboard",
       "description": "Logitech Keyboard",
       "price": 600,
+      "category":"Technology",
       "photos": [
         "https://images.unsplash.com/photo-1585314614250-d213876625e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80",
         "https://images.unsplash.com/photo-1630701072000-a96803fe9f3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2079&q=80"
@@ -110,6 +115,7 @@
       "title": "Macbook",
       "description": "Trees live in your fan brush, but you have to scare them out. Just let this happen. We just let this flow right out of our minds. You're meant to have fun in life. Clouds are free. They just float around the sky all day and have fun.\n\nSee there how easy that is. Automatically, all of these beautiful, beautiful things will happen. We tell people sometimes: we're like drug dealers, come into town and get everybody absolutely addicted to painting. It doesn't take much to get you addicted. These trees are so much fun. I get started on them and I have a hard time stopping. Life is too short to be alone, too precious. Share it with a friend.",
       "price": 600,
+      "category":"Technology",
       "photos": [
         "https://images.unsplash.com/photo-1597673030062-0a0f1a801a31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1596&q=80",
         "https://images.unsplash.com/photo-1593642633279-1796119d5482?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
@@ -120,6 +126,7 @@
       "title": "Apple Watch",
       "description": "apple watch saati",
       "price": "1500",
+      "category":"Technology",
       "photos": [
         "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
       ],
@@ -129,6 +136,7 @@
       "title": "Kurşun kalem",
       "description": "Siyah kurşun kalem",
       "price": "14",
+      "category":"stationary",
       "photos": [
         "https://images.unsplash.com/photo-1617620188695-e515d56025a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80"
       ],
@@ -138,6 +146,7 @@
       "title": "Hoparlör",
       "description": "Hoparlör",
       "price": "150",
+      "category":"Technology",
       "photos": [
         "https://images.unsplash.com/photo-1545454675-3531b543be5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
       ],
@@ -147,6 +156,7 @@
       "title": "maymun",
       "description": "gerçek maymun (babun)",
       "price": "20000",
+      "category":"animal",
       "photos": [
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Olive_baboon.jpg/640px-Olive_baboon.jpg"
       ],

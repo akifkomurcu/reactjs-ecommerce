@@ -19,8 +19,7 @@ const WishlistProvider = ({ children }) => {
     setItem(filtered);
   };
 
-  //orderdan sonra sepet boşaltma.
-
+  //wishlist boşaltma işlemi
   const emptyWishlist = () => setItem([]);
 
   const removeFromWishlist = (id) => {

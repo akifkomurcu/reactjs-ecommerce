@@ -24,7 +24,6 @@ function NewProduct() {
   });
 
   const handleSubmit = async (values, bag) => {
-    console.log(values);
     message.loading({ content: "Saving...", key: "product_create" });
     newProductMutation.mutate(values, {
       onSuccess: () => {
