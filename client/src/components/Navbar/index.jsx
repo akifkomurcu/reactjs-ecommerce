@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./style.module.css";
-import { Button, Input } from "@chakra-ui/react";
+import { Button, color, Input, Box } from "@chakra-ui/react";
 import { useAuth } from "../../context/AuthContext";
 import { useWishlist } from "../../context/Wishlist";
 import { useBasket } from "../../context/BasketContext";
@@ -13,7 +13,8 @@ function Navbar() {
   const { items } = useBasket();
   const { item } = useWishlist();
   const { user } = useAuth();
-  const { setResult, result, setFiltered } = useContext(FilterContext);
+  const { setResult, result, setFiltered, filtered } =
+    useContext(FilterContext);
   const { data } = useQuery("filtering:products", fetchAllProduct);
 
   useEffect(() => {
@@ -32,6 +33,7 @@ function Navbar() {
   const handleClick = () => {
     setResult("");
   };
+
   return (
     <nav className={styles.nav}>
       <div className={styles.left}>
@@ -41,9 +43,24 @@ function Navbar() {
           </Link>
         </div>
         <ul className={styles.menu}>
-          <li>
-            <Link to="/">Products</Link>
-          </li>
+          <div className={styles.navbar}>
+            <div className={styles.dropdown}>
+              <Link to="/" onClick={handleClick} className={styles.dropbtn}>
+                <i className="fa fa-caret-down">Products</i>
+              </Link>
+              <div className={styles.dropdownContent}>
+                <a value="technology" onClick={(e) => setResult("Technology")}>
+                  Technology
+                </a>
+                <a value="animal" onClick={(e) => setResult("Animal")}>
+                  Animal
+                </a>
+                <a value="stationary" onClick={(e) => setResult("Stationary")}>
+                  Stationary
+                </a>
+              </div>
+            </div>
+          </div>
         </ul>
       </div>
       <div className={styles.right}>
@@ -53,17 +70,18 @@ function Navbar() {
           placeholder="Search"
           onChange={handleChange}
           value={result}
+          marginRight="5px"
         />
         {/* kullanıcı yoksa */}
         {!user && (
           <>
             <Link to="/register">
-              <Button colorScheme="teal" variant="ghost">
+              <Button colorScheme="black" variant="ghost" marginRight="5px">
                 Register
               </Button>
             </Link>
             <Link to="/login">
-              <Button colorScheme="teal" variant="ghost">
+              <Button colorScheme="teal" variant="ghost" marginRight="5px">
                 Login
               </Button>
             </Link>
@@ -74,28 +92,33 @@ function Navbar() {
           <>
             {items.length > 0 && (
               <Link to="/basket">
-                <Button colorScheme="teal" variant="ghost">
+                <Button colorScheme="black" variant="ghost" marginRight="5px">
                   Basket ({items.length})
                 </Button>
               </Link>
             )}
             {user && user.role === "admin" && (
               <Link to="/admin">
-                <Button colorScheme="teal" variant="ghost">
+                <Button colorScheme="teal" variant="ghost" marginRight="5px">
                   Admin
                 </Button>
               </Link>
             )}
             {item.length > 0 && (
               <Link to="/wishlist">
-                <Button colorScheme="teal" variant="ghost">
+                <Button colorScheme="teal" variant="ghost" marginRight="5px">
                   Wishlist({item.length})
                 </Button>
               </Link>
             )}
             {user && (
               <Link to="/profile">
-                <Button colorScheme="teal" variant="ghost">
+                <Button
+                  background="black"
+                  _hover={{ bg: "white", color: "black" }}
+                  color={"white"}
+                  marginRight="5px"
+                >
                   Profile
                 </Button>
               </Link>
