@@ -1,20 +1,27 @@
 import { Link } from "react-router-dom";
 import styles from "./style.module.css";
-import { Button, color, Input, Box } from "@chakra-ui/react";
+import {
+  Button,
+  Menu,
+  Input,
+  MenuButton,
+  MenuList,
+  MenuItem,
+} from "@chakra-ui/react";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 import { useAuth } from "../../context/AuthContext";
 import { useWishlist } from "../../context/Wishlist";
 import { useBasket } from "../../context/BasketContext";
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { useQuery } from "react-query";
 import { fetchAllProduct } from "../../api";
-import { useContext } from "react";
 import FilterContext from "../../context/FilteredContext";
+import { useLocation } from "react-router-dom";
 function Navbar() {
   const { items } = useBasket();
   const { item } = useWishlist();
   const { user } = useAuth();
-  const { setResult, result, setFiltered, filtered } =
-    useContext(FilterContext);
+  const { setResult, result, setFiltered } = useContext(FilterContext);
   const { data } = useQuery("filtering:products", fetchAllProduct);
 
   useEffect(() => {
@@ -27,6 +34,11 @@ function Navbar() {
         })
       );
   }, [result]);
+  const usePathname = () => {
+    const location = useLocation();
+    return location.pathname;
+  };
+
   const handleChange = (e) => {
     setResult(e.target.value);
   };
@@ -42,36 +54,52 @@ function Navbar() {
             E-commerce
           </Link>
         </div>
-        <ul className={styles.menu}>
-          <div className={styles.navbar}>
-            <div className={styles.dropdown}>
-              <Link to="/" onClick={handleClick} className={styles.dropbtn}>
-                <i className="fa fa-caret-down">Products</i>
-              </Link>
-              <div className={styles.dropdownContent}>
-                <a value="technology" onClick={(e) => setResult("Technology")}>
+
+        {usePathname() === "/" ? (
+          <div className={styles.menu}>
+            <Menu>
+              <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                Products
+              </MenuButton>
+              <MenuList>
+                <MenuItem value="" onClick={() => setResult("")}>
+                  All
+                </MenuItem>
+                <MenuItem
+                  value="technology"
+                  onClick={() => setResult("Technology")}
+                >
                   Technology
-                </a>
-                <a value="animal" onClick={(e) => setResult("Animal")}>
+                </MenuItem>
+                <MenuItem value="animal" onClick={() => setResult("Animal")}>
                   Animal
-                </a>
-                <a value="stationary" onClick={(e) => setResult("Stationary")}>
+                </MenuItem>
+                <MenuItem
+                  value="stationary"
+                  onClick={() => setResult("Stationary")}
+                >
                   Stationary
-                </a>
-              </div>
-            </div>
+                </MenuItem>
+              </MenuList>
+            </Menu>
           </div>
-        </ul>
+        ) : (
+          ""
+        )}
       </div>
       <div className={styles.right}>
-        <Input
-          htmlSize={10}
-          width="auto"
-          placeholder="Search"
-          onChange={handleChange}
-          value={result}
-          marginRight="5px"
-        />
+        {usePathname() === "/" ? (
+          <Input
+            htmlSize={10}
+            width="auto"
+            placeholder="Search"
+            onChange={handleChange}
+            value={result}
+            marginRight="5px"
+          />
+        ) : (
+          ""
+        )}
         {/* kullanıcı yoksa */}
         {!user && (
           <>

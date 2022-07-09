@@ -5,7 +5,7 @@ import { fetchProductList } from "../../api";
 import React from "react";
 import { useContext } from "react";
 import FilterContext from "../../context/FilteredContext";
-function Products() {
+function Products(props) {
   const { result, filtered } = useContext(FilterContext);
 
   const {
@@ -25,8 +25,10 @@ function Products() {
       return allGroups.length + 1;
     },
   });
+
   if (status === "loading") return "Loading...";
   if (status === "error") return "An error has occurred: " + error.message;
+
   return (
     <div>
       <Grid templateColumns="repeat(4, 1fr)" gap={1}>
