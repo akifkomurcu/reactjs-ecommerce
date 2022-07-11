@@ -6,7 +6,7 @@
   width: 300px;
   height: 150px;
   padding: 10px;
-  font-size: 20px;
+  font-size: 25px;
 }
 .myOrdersContent {
   margin-top: 5px;
@@ -35,21 +35,25 @@
   padding-left: 30px;
 }
 .ProfilePictureArea {
-  width: 200px;
+  width: 400px;
   height: 200px;
   margin: 0 auto;
 }
 .ProfilePicture {
-  margin-top: 20px;
-  width: 160px;
-  height: 150px;
-  border-radius: 65%;
+  border-bottom: 7px solid black;
 }
 .profileMenu {
   width: 300px;
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-right: 10px;
   justify-content: space-between;
+  font-size: 25px;
+}
+.stick {
+  width: 300px;
+}
+.About {
+  font-size: 25px;
 }

@@ -34,10 +34,20 @@ function Profile() {
           </div>
           <div className={style.right}>
             <Link to="/" className={style.logOutButton}>
-              <Button colorScheme="blackAlpha" onClick={handleLogOut} mr={3}>
+              <Button
+                background="black"
+                _hover={{ bg: "white", color: "black" }}
+                color={"white"}
+                onClick={handleLogOut}
+                mr={3}
+              >
                 Edit Profile
               </Button>
-              <Button colorScheme="red" onClick={handleLogOut}>
+              <Button
+                colorScheme="red"
+                _hover={{ bg: "white", color: "black" }}
+                onClick={handleLogOut}
+              >
                 Logout
               </Button>
             </Link>
@@ -45,12 +55,14 @@ function Profile() {
             <div>
               <div className={style.profileMenu}>
                 <Link to="/profile/about">
-                  <a>About</a>
+                  <div className={style.AboutTab}>About</div>
                 </Link>
                 <Link to={`/profile/myorders`}>
-                  <a>Orders</a>
+                  <div className={style.OrdersTab}>Orders</div>
                 </Link>
               </div>
+
+              <hr className={style.stick} />
             </div>
             <Box mt={10}>
               <Routes>

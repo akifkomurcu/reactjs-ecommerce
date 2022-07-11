@@ -1,10 +1,6 @@
-import { useState, useEffect } from "react";
-import { useAuth } from "../../context/AuthContext";
 import { ListItem, UnorderedList, Box } from "@chakra-ui/react";
-import { Link, Route, Routes } from "react-router-dom";
 import { useQuery } from "react-query";
 import { FetchOrder } from "../../api";
-import Login from "../Auth/Login";
 import style from "./style.module.css";
 
 function MyOrders() {
@@ -25,9 +21,9 @@ function MyOrders() {
             )
             .map((order, index) => (
               <Box key={index}>
-                <Box>
-                  {order.items.map((item) => (
-                    <UnorderedList>
+                <Box key={index}>
+                  {order.items.map((item, index) => (
+                    <UnorderedList key={index}>
                       <ListItem>{item}</ListItem>
                     </UnorderedList>
                   ))}

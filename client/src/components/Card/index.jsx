@@ -1,12 +1,11 @@
 import { Box, Image, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import moment from "moment";
 import style from "./style.module.css";
 import { useBasket } from "../../context/BasketContext";
-import { useAuth } from "../../context/AuthContext";
 import { useWishlist } from "../../context/Wishlist";
-import Wishlist from "../../pages/Wishlist";
-import { AddWishListAPI } from "../../api";
+import addWish from "./addWish.png";
+import removeWish from "./removeWish.png";
+
 function Card({ product }) {
   const { addToBasket, items } = useBasket();
   const findBasketItem = items.find(
@@ -44,21 +43,25 @@ function Card({ product }) {
               </Box>
               <Box className={style.price}>{product.price}TL</Box>
             </Box>
-            <Button
-              w={20}
-              colorScheme={findWishlistItem ? "red" : "teal"}
-              variant="outline"
-              onClick={() => addToWishlist(product, findWishlistItem)}
-            >
-              {findWishlistItem ? "Remove" : "Add to Wishlist"}
-            </Button>
-            <Button
-              colorScheme={findBasketItem ? "red" : "teal"}
-              variant="outline"
-              onClick={() => addToBasket(product, findBasketItem)}
-            >
-              {findBasketItem ? "Remove" : "Add to basket"}
-            </Button>
+            <div className={style.addProductArea}>
+              <img
+                src={findWishlistItem ? removeWish : addWish}
+                style={{
+                  width: "30px",
+                  height: "30px",
+                  cursor: "pointer",
+                }}
+                onClick={() => addToWishlist(product, findWishlistItem)}
+              />
+
+              <Button
+                colorScheme={findBasketItem ? "red" : "teal"}
+                variant="outline"
+                onClick={() => addToBasket(product, findBasketItem)}
+              >
+                {findBasketItem ? "Remove" : "Add to basket"}
+              </Button>
+            </div>
           </Box>
         </Box>
       )}

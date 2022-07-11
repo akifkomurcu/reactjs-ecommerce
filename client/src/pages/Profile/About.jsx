@@ -1,10 +1,11 @@
 import React from "react";
+import style from "./style.module.css";
 import { useAuth } from "../../context/AuthContext";
 function About() {
   const { user } = useAuth();
-  console.log("user", user);
+
   return (
-    <div>
+    <div className={style.About}>
       About <br />
       {user && (
         <div>

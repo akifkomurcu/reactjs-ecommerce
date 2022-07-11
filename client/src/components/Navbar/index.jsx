@@ -120,7 +120,7 @@ function Navbar() {
           <>
             {items.length > 0 && (
               <Link to="/basket">
-                <Button colorScheme="black" variant="ghost" marginRight="5px">
+                <Button colorScheme="teal" variant="ghost">
                   Basket ({items.length})
                 </Button>
               </Link>
@@ -135,18 +135,13 @@ function Navbar() {
             {item.length > 0 && (
               <Link to="/wishlist">
                 <Button colorScheme="teal" variant="ghost" marginRight="5px">
-                  Wishlist({item.length})
+                  Wishlist ({item.length})
                 </Button>
               </Link>
             )}
             {user && (
               <Link to="/profile">
-                <Button
-                  background="black"
-                  _hover={{ bg: "white", color: "black" }}
-                  color={"white"}
-                  marginRight="5px"
-                >
+                <Button colorScheme="teal" variant="ghost" marginRight="5px">
                   Profile
                 </Button>
               </Link>
