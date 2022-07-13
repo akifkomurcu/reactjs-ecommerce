@@ -6,11 +6,18 @@ function About() {
 
   return (
     <div className={style.About}>
-      About <br />
       {user && (
-        <div>
+        <div className={style.AboutArea}>
           {" "}
-          Email:{user.email} <br /> Role:{user.role}
+          <div>
+            Email
+            <hr style={{ width: "100px" }} />
+            {user.email}
+          </div>
+          <div className={style.AboutAreaRole}>
+            Role <hr style={{ width: "100px" }} />
+            {user.role}
+          </div>
         </div>
       )}
     </div>

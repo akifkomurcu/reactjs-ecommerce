@@ -51,7 +51,7 @@ function Profile() {
                 Logout
               </Button>
             </Link>
-            <div className={style.welcome}> {me}</div>
+            {/* <div className={style.welcome}> {me}</div> */}
             <div>
               <div className={style.profileMenu}>
                 <Link to="/profile/about">

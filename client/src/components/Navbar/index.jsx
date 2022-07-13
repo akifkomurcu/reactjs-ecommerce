@@ -140,7 +140,7 @@ function Navbar() {
               </Link>
             )}
             {user && (
-              <Link to="/profile">
+              <Link to="/profile/about">
                 <Button colorScheme="teal" variant="ghost" marginRight="5px">
                   Profile
                 </Button>
