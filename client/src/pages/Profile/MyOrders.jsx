@@ -6,7 +6,7 @@ import style from "./style.module.css";
 
 function MyOrders() {
   const { isLoading, isError, data } = useQuery("orders", FetchOrder);
-
+  console.log("data", data);
   if (isLoading) {
     return <div>Loading</div>;
   }
